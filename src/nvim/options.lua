@@ -91,6 +91,13 @@ return {
       cb='did_set_ambiwidth'
     },
     {
+      full_name='appendregister', abbreviation='apr',
+      short_desc=N_("use uppercase letters to append to a register"),
+      type='bool', scope={'global'},
+      varname='p_apr',
+      defaults={if_true=true}
+    },
+    {
       full_name='autochdir', abbreviation='acd',
       short_desc=N_("change directory to the file in the current window"),
       type='bool', scope={'global'},

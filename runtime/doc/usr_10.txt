@@ -117,7 +117,7 @@ include all the lines.)
 APPENDING TO A REGISTER
 
 So far we have used a lowercase letter for the register name.  To append to a
-register, use an uppercase letter.
+register, use an uppercase letter when `appendregister` is enabled (default).
    Suppose you have recorded a command to change a word to register c.  It
 works properly, but you would like to add a search for the next word to
 change.  This can be done with: >

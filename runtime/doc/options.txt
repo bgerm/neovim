@@ -617,6 +617,17 @@ A jump table for the options with a short description can be found at |Q_op|.
 	set to one of CJK locales.  See Unicode Standard Annex #11
 	(https://www.unicode.org/reports/tr11).
 
+					*'appendregister'* *'apr'*
+					*'noappendregister'* *'noapr'*
+'appendregister' 'apr'	boolean	(default on)
+
+			global
+
+	Uppercase letters append content to a register.  This defaults to on.
+	Set this to off to avoid accidentally modifying the contents of
+	a register. When off the unnamed register is used in replace of the
+	uppercase letter.
+
 			*'autochdir'* *'acd'* *'noautochdir'* *'noacd'*
 'autochdir' 'acd'	boolean (default off)
 			global

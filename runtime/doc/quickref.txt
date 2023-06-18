@@ -623,6 +623,7 @@ Short explanation of each option:		*option-list*
 'aleph'		  'al'	    ASCII code of the letter Aleph (Hebrew)
 'allowrevins'	  'ari'     allow CTRL-_ in Insert and Command-line mode
 'ambiwidth'	  'ambw'    what to do with Unicode chars of ambiguous width
+'appendregister'  'apr'     uppercase letters append to a register
 'autochdir'	  'acd'     change directory to the file in the current window
 'arabic'	  'arab'    for Arabic as a default second language
 'arabicshape'	  'arshape' do shaping for Arabic characters

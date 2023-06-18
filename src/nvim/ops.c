@@ -837,7 +837,11 @@ yankreg_T *get_yank_register(int regname, int mode)
   // when not 0-9, a-z, A-Z or '-'/'+'/'*': use register 0
   if (i == -1) {
     i = 0;
+  } else if (!p_apr && is_append_register(regname)) {
+    // use register 0 when `appendregister` is off and an uppercase is requested 
+    i = 0;
   }
+
   reg = &y_regs[i];
 
   if (mode == YREG_YANK) {
@@ -966,7 +970,7 @@ static void set_yreg_additional_data(yankreg_T *reg, dict_T *additional_data)
 }
 
 /// Stuff string "p" into yank register "regname" as a single line (append if
-/// uppercase). "p" must have been allocated.
+/// uppercase and appendregister is on). "p" must have been allocated.
 ///
 /// @return  FAIL for failure, OK otherwise
 static int stuff_yank(int regname, char *p)

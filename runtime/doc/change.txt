@@ -974,9 +974,10 @@ inside of strings can change!  Also see 'softtabstop' option. >
 5. Copying and moving text				*copy-move*
 
 							*quote*
-"{register}		Use {register} for next delete, yank or put.  Use
-			an uppercase character to append with delete and yank.
-			Registers ".", "%", "#" and ":" only work with put.
+"{register}		Use {register} for next delete, yank or put.  With
+			`appendregister`, use an uppercase character to append
+			with delete and yank. Registers ".", "%", "#" and ":"
+			only work with put.
 
 							*:reg* *:registers*
 :reg[isters]		Display the type and contents of all numbered and
@@ -1233,9 +1234,9 @@ except when the command specifies a register with ["x].
 
 4. Named registers "a to "z or "A to "Z			*quote_alpha* *quotea*
 Vim fills these registers only when you say so.  Specify them as lowercase
-letters to replace their previous contents or as uppercase letters to append
-to their previous contents.  When the '>' flag is present in 'cpoptions' then
-a line break is inserted before the appended text.
+letters to replace their previous contents or, with `appendregister` on, as
+uppercase letters to append to their previous contents.  When the '>' flag is
+present in 'cpoptions' then a line break is inserted before the appended text.
 
 5. Read-only registers ":, ". and "%
 These are '%', ':' and '.'.  You can use them only with the "p", "P",
